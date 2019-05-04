@@ -18,7 +18,7 @@
 
 
 Auth::routes();
-//Route::redirect('/register', '/login'); //Block register
+Route::redirect('/register', '/login'); //Block register
 
 Route::group([
     'as' => 'admin.',

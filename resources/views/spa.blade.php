@@ -10,10 +10,9 @@
 
 <body>
     <div id="app"></div>
-
-     <script src="{{ asset('plugins/slick/slick.min.js') }}"></script>
+         <script src="{{ asset('plugins/slick/slick.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <script src="{{ asset('plugins/jquery-1.8.1.js') }}"></script>
+      
       <script src="{{ asset('js/common.js') }}"></script>
 
     <script>
