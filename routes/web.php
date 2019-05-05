@@ -27,41 +27,41 @@ Route::group([
     'prefix' => 'admin'], function() {
 
         // Dashboard
-        Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::get('Volodimir3.loc/admin/posts', 'DashboardController@index')->name('dashboard');
 
 //      Pages
-        Route::get('/pages/{type}', 'PagesController@index');
-        Route::get('/pages', 'PagesController@index');
-        Route::get('/pages/create/{type}', ['as' => 'pages.create', 'uses' => 'PagesController@create']);
-        Route::post('/pages/store', ['as' => 'pages.store', 'uses' => 'PagesController@store']);
-        Route::get('/pages/{id}/edit', ['as' => 'pages.edit', 'uses' => 'PagesController@edit']);
-        Route::put('/pages/{id}', ['as' => 'pages.update', 'uses' => 'PagesController@update']);
-        Route::get('/pages/{id}/delete', ['as' => 'pages.delete', 'uses' => 'PagesController@delete']);
+        Route::get('Volodimir3.loc/admin/posts/pages/{type}', 'PagesController@index');
+        Route::get('Volodimir3.loc/admin/posts/pages', 'PagesController@index');
+        Route::get('Volodimir3.loc/admin/posts/pages/create/{type}', ['as' => 'pages.create', 'uses' => 'PagesController@create']);
+        Route::post('Volodimir3.loc/admin/posts/pages/store', ['as' => 'pages.store', 'uses' => 'PagesController@store']);
+        Route::get('Volodimir3.loc/admin/posts/pages/{id}/edit', ['as' => 'pages.edit', 'uses' => 'PagesController@edit']);
+        Route::put('Volodimir3.loc/admin/posts/pages/{id}', ['as' => 'pages.update', 'uses' => 'PagesController@update']);
+        Route::get('Volodimir3.loc/admin/posts/pages/{id}/delete', ['as' => 'pages.delete', 'uses' => 'PagesController@delete']);
         // Route::resource('/pages', 'PagesController');
 
 //      Categories
-        Route::resource('/categories', 'CategoriesController');
+        Route::resource('Volodimir3.loc/admin/posts/categories', 'CategoriesController');
 
 //      Language
-        Route::resource('/language', 'LanguageController');
+        Route::resource('Volodimir3.loc/admin/posts/language', 'LanguageController');
 
 //      Posts
-        Route::resource('/posts', 'PostsController');
+        Route::resource('Volodimir3.loc/admin/posts/posts', 'PostsController');
 
 //      Posts
-        Route::resource('/reviews', 'ReviewsController');
-        Route::put('reviews/status/{id}', ['as' => 'reviews.status', 'uses' => 'ReviewsController@status']);
+        Route::resource('Volodimir3.loc/admin/posts/reviews', 'ReviewsController');
+        Route::put('Volodimir3.loc/admin/postsreviews/status/{id}', ['as' => 'reviews.status', 'uses' => 'ReviewsController@status']);
 
 //      Users
-        Route::resource('/users', 'UsersController');
+        Route::resource('Volodimir3.loc/admin/posts/users', 'UsersController');
 
 //      Roles
-        Route::resource('/roles', 'RolesController');
+        Route::resource('Volodimir3.loc/admin/posts/roles', 'RolesController');
 
 //      Settings
         Route::prefix('settings')->name('settings.')->group(function () {
-            Route::get('/', 'SettingsController@edit')->name('edit');
-            Route::put('/', 'SettingsController@update')->name('update');
+            Route::get('Volodimir3.loc/admin/posts', 'SettingsController@edit')->name('edit');
+            Route::put('Volodimir3.loc/admin/posts', 'SettingsController@update')->name('update');
         });
 
     });
