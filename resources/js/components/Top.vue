@@ -3,7 +3,7 @@
     <div class="wrapper ">
       <div class="header__wrapper">
         <router-link to="/" class="header__logo">
-          <img src="img/logo-header.svg">
+          <img src="/img/logo-header.svg" alt="Logo">
         </router-link>
         <button class="open">Open</button>
         <div class="header__block">
