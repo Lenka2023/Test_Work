@@ -50,7 +50,7 @@ Route::group([
 
 //      Posts
         Route::resource('Volodimir3.loc/admin/posts/reviews', 'ReviewsController');
-        Route::put('Volodimir3.loc/admin/postsreviews/status/{id}', ['as' => 'reviews.status', 'uses' => 'ReviewsController@status']);
+        Route::put('reviews/status/{id}', ['as' => 'reviews.status', 'uses' => 'ReviewsController@status']);
 
 //      Users
         Route::resource('Volodimir3.loc/admin/posts/users', 'UsersController');
